@@ -9,7 +9,7 @@ Focused on efficiency over other flashcard systems.
 
 ## Live Link:
 
-To be added.
+[Live Demo Link](https://btenc.github.io/Quick-Cards-CS545/)
 
 ## Features
 
