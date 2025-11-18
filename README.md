@@ -21,11 +21,12 @@ To be added.
 - System and browser zoom compliant.
 - Import / Export decks as JSON.
 - Light + Dark themes (or Auto).
-- Accessible: Built around HCI and
-  accessibility best practices: colorblind-safe palette,
-  screen-reader labels, predictable tab and reading order, large click areas
-  reduced-motion compliance, high-contrast UI, full zoom
-  support.
+- Accessible: Built around user centered design principles and
+  accessibility best practices: Simple and clearly labeled
+  buttons with feedback, minimal and direct navigation style,
+  colorblind-safe palette, screen-reader labels, predictable tab
+  and reading order, large click areas, reduced-motion
+  compliance, high-contrast UI, full zoom support, and more.
 
 ## Development
 

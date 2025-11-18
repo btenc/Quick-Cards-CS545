@@ -277,60 +277,44 @@ export default function App() {
               touch. Spend more time studying and less clicking!
             </p>
 
-            <section className="mb-4">
-              <h3 className="text-sm font-semibold mb-2">About</h3>
-              <ul className="text-left text-sm space-y-2">
-                <li>
-                  <strong>Study mode</strong> – Review your cards one at a time.
-                </li>
-                <li>
-                  <strong>Edit mode</strong> – Add, remove, and change cards.
-                </li>
-                <li>
-                  <strong>Mobile-friendly</strong> – Layout adapts to small
-                  screens.
-                </li>
-                <li>
-                  <strong>Theme options</strong> – Light, dark, or auto to match
-                  your device.
-                </li>
-                <li>
-                  <strong>Local only</strong> – Your deck lives in this browser.
-                  No cloud, no account.
-                </li>
-              </ul>
-            </section>
-
             <section>
               <h3 className="text-sm font-semibold mb-2">Help & Controls</h3>
               <ul className="text-left text-sm space-y-2">
                 <li>
                   <strong>Keyboard shortcuts</strong> –{" "}
                   <span className="kbd">Space</span> flip,&nbsp;
-                  <span className="kbd">G</span> got it / restart,&nbsp;
+                  <span className="kbd">G</span>/
+                  <span className="kbd">Enter</span> got it / restart,&nbsp;
                   <span className="kbd">←</span>/<span className="kbd">→</span>{" "}
                   move,&nbsp;
                   <span className="kbd">S</span> shuffle,&nbsp;
                   <span className="kbd">D</span> switch Q/A.
                 </li>
+
                 <li>
-                  <strong>Buttons</strong> – Everything available from keyboard
-                  also has a button.
+                  <strong>Buttons</strong> – All of these actions also have
+                  clear, clickable buttons if you prefer the mouse.
                 </li>
+
                 <li>
-                  <strong>Autosave</strong> – Changes save automatically as you
-                  type.
+                  <strong>Local deck</strong> – Your current deck is saved
+                  automatically in this browser as you edit. It stays on this
+                  device and will be there next time you open the app.
                 </li>
+
                 <li>
-                  <strong>Import / Export</strong> – Export saves your deck as
-                  JSON; import loads it back.
+                  <strong>Import / Export</strong> – Use <code>Export</code> to
+                  download your deck as a <code>.json</code> file so you can
+                  back it up or move it to another browser or device. Use{" "}
+                  <code>Import</code> to load a deck from a<code>.json</code>{" "}
+                  file into the app as your current deck.
                 </li>
+
                 <li>
-                  <strong>Accessibility</strong> – Built around HCI and
-                  accessibility best practices: colorblind-safe palette, large
-                  click areas, screen-reader labels, predictable tab and reading
-                  order, reduced-motion compliance, high-contrast UI, full zoom
-                  support.
+                  <strong>Accessibility</strong> – Predictable tab order, large
+                  click areas, readable text, high contrast, and screen-reader
+                  friendly labels. Works well with browser zoom and
+                  reduced-motion settings.
                 </li>
               </ul>
             </section>
