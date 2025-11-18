@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/CS545-Quick-Cards/",
+  base: "/Quick-Cards-CS545/",
 });
