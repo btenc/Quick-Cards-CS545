@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/components/Card.tsx","./src/components/EditView.tsx","./src/components/StudyView.tsx","./src/utils/shuffle.ts","./src/utils/storage.ts"],"version":"5.9.3"}
