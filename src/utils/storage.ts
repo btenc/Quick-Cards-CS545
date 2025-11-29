@@ -18,9 +18,7 @@ export const defaultDeck = (): Deck => ({
   schemaVersion: 1,
   name: "Sample Set",
   cards: [
-    { q: "What is HCI?", a: "Human–Computer Interaction" },
-    { q: "Primary action key?", a: "G marks “Got it”." },
-    { q: "Flip the card?", a: "Press Space or click the card." },
+    { q: "Question", a: "Answer" }
   ],
   defaults: { direction: "Q2A", shuffle: true },
 });

@@ -17,7 +17,7 @@ type Mode = "study" | "edit";
 type Theme = "auto" | "light" | "dark";
 
 export default function App() {
-  const [mode, setMode] = React.useState<Mode>("study");
+  const [mode, setMode] = React.useState<Mode>("edit");
   const [deck, setDeck] = React.useState<Deck>(() => {
     return loadDeck() ?? defaultDeck();
   });

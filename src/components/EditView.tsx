@@ -1,6 +1,7 @@
 import React from "react";
 import type { Deck, CardItem } from "../utils/storage";
 
+
 type EditViewProps = {
   deck: Deck;
   onSave: (d: Deck, msg?: string) => void;
@@ -51,7 +52,11 @@ export function EditView({
   const [shuffle, setShuffle] = React.useState<boolean>(deck.defaults.shuffle);
 
   const liveRef = React.useRef<HTMLDivElement>(null);
+  const firstInputRef = React.useRef<HTMLInputElement>(null);
 
+  React.useEffect(() => {
+    firstInputRef.current?.focus();
+  }, []);
   const announce = (message: string) => {
     const region = liveRef.current;
     if (!region) return;
@@ -249,6 +254,7 @@ export function EditView({
         <label className="grid gap-1 text-left">
           <span className="text-sm">Set name</span>
           <input
+            ref={firstInputRef}
             className="btn"
             value={name}
             onChange={(event) => setName(event.target.value)}

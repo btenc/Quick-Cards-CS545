@@ -204,7 +204,7 @@ export function StudyView({ deck, onSave }: StudyViewProps) {
             <div>
               <p className="text-2xl mb-2">🎉 Done! Great work!</p>
               <p className="text-[var(--muted)]">
-                Press <span className="kbd">G</span> to restart this session.
+                 Click Restart below, or Press <span className="kbd">G</span> to restart this session.
               </p>
             </div>
           </div>

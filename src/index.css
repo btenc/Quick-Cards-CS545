@@ -13,11 +13,11 @@
 
 /* Light theme */
 :root[data-theme="light"] {
-  --bg: #ffffff;
+  --bg: #fafafa;
   --fg: #111827;
   --muted: #4b5563;
-  --card: #f3f4f6;
-  --border: #e5e7eb;
+  --card: #eeeeee;
+  --border: #c9c9c9;
   --accent: #2563eb;
   --onAccent: #ffffff;
 }
@@ -36,11 +36,11 @@
 /* Auto theme */
 @media (prefers-color-scheme: light) {
   :root[data-theme="auto"] {
-    --bg: #ffffff;
+    --bg: #fafafa;
     --fg: #111827;
     --muted: #4b5563;
-    --card: #f3f4f6;
-    --border: #e5e7eb;
+    --card: #eeeeee;
+    --border: #c9c9c9;
     --accent: #2563eb;
     --onAccent: #ffffff;
   }
@@ -172,6 +172,7 @@ button:disabled:active {
 .btn-wide {
   min-width: 9rem;
 }
+
 
 /* Keyboard shortcut chip */
 .kbd {
