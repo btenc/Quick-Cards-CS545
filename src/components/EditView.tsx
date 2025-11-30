@@ -52,11 +52,9 @@ export function EditView({
   const [shuffle, setShuffle] = React.useState<boolean>(deck.defaults.shuffle);
 
   const liveRef = React.useRef<HTMLDivElement>(null);
-  const firstInputRef = React.useRef<HTMLInputElement>(null);
+  const newCardRef = React.useRef<HTMLLIElement>(null);
+  const newCardInputRef = React.useRef<HTMLTextAreaElement>(null)
 
-  React.useEffect(() => {
-    firstInputRef.current?.focus();
-  }, []);
   const announce = (message: string) => {
     const region = liveRef.current;
     if (!region) return;
@@ -82,7 +80,7 @@ export function EditView({
 
   React.useEffect(() => {
     scheduleSave();
-  }, [name, cards, direction, shuffle, scheduleSave]);
+  }, [name, direction, shuffle, scheduleSave]);
 
   React.useEffect(() => {
     setName(deck.name);
@@ -93,6 +91,14 @@ export function EditView({
 
   const addCard = () => {
     setCards((previousCards) => [...previousCards, { q: "", a: "" }]);
+
+    setTimeout(() => {
+      newCardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    
+      newCardInputRef.current?.focus();}, 
+    50);
+
+    
   };
 
   const deleteCard = (index: number) => {
@@ -117,7 +123,7 @@ export function EditView({
     cancelSave();
 
     const confirmed = window.confirm(
-      "Importing will replace your current set. If you have unexported changes, they will be lost. Continue?"
+      "Importing will replace your current set. If you have unsaved changes, they will be lost. Continue?"
     );
 
     if (!confirmed) return;
@@ -254,7 +260,6 @@ export function EditView({
         <label className="grid gap-1 text-left">
           <span className="text-sm">Set name</span>
           <input
-            ref={firstInputRef}
             className="btn"
             value={name}
             onChange={(event) => setName(event.target.value)}
@@ -311,7 +316,11 @@ export function EditView({
 
       <ul className="grid gap-4" aria-label="Active cards">
         {activeCards.map(({ card, index }) => (
-          <li key={index} className="surface p-3">
+          <li 
+          key={index}
+          ref={index === activeCards.length - 1 ? newCardRef : null}
+          className="surface p-3"
+          >
             <div className="grid md:grid-cols-2 gap-2">
               <label className="grid gap-1 text-left">
                 <span className="text-sm">Question</span>
@@ -319,6 +328,7 @@ export function EditView({
                   rows={3}
                   className="btn"
                   value={card.q}
+                  ref={index === activeCards.length - 1 ? newCardInputRef : null}
                   onChange={(event) =>
                     updateCard(index, { q: event.target.value })
                   }

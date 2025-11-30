@@ -62,7 +62,7 @@ export default function App() {
 
     if (isDirty) {
       const confirmed = window.confirm(
-        "You have unexported changes. Creating a new set will overwrite the current one. Continue?"
+        "You have unsaved changes. Creating a new set will overwrite the current one. Continue?"
       );
       if (!confirmed) return;
     }
@@ -218,7 +218,7 @@ export default function App() {
         </div>
 
         <div className="mx-auto max-w-4xl px-3 pb-2 text-xs text-[var(--muted)]">
-          {dirtySinceExport ? "Changes not exported" : "All changes exported"}
+          {dirtySinceExport ? "Changes not saved" : "All changes saved"}
         </div>
       </header>
 
@@ -227,7 +227,6 @@ export default function App() {
           <StudyView deck={deck} onSave={save} />
         ) : (
           <EditView
-            key={hashDeck(deck)}
             deck={deck}
             onSave={save}
             onNew={onNew}
